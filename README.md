@@ -17,3 +17,4 @@
   - size()
   - subSet(E fromElement, E toElement)
   - iterator()
+  - tailSet(E fromElement)
