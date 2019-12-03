@@ -1,5 +1,3 @@
-package groupProject;
-
 /********************************************************************
 * TrainRoute.java
 * Manish Lamsal
@@ -22,15 +20,17 @@ public class TrainRoute
   
   public void getRoute(TrainStop current, TrainStop dest)
   {
-    TreeSet<TrainStop> route = new TreeSet<TrainStop>();
-    route = (TreeSet<TrainStop>) geo.subSet(current, dest);
+    SortedSet<TrainStop> route = new TreeSet<TrainStop>();
+    route = geo.subSet(current, dest);
     Iterator<TrainStop> iterate;
     iterate = route.iterator();
     
+    System.out.println("\nThe stops you need to take are:\n");
     while (iterate.hasNext())
     {
       System.out.println(iterate.next());
     }
+    System.out.println(dest);
   } // end getRoute
   
   public void printStops()
