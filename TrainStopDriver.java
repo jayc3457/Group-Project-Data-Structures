@@ -10,18 +10,23 @@ public class TrainStopDriver
   public static void main(String[] args) 
   {
     TrainRoute route = new TrainRoute();
-    TrainStop[] stops = {new TrainStop("Jesse", 1), new TrainStop("Manish", 4), 
-      new TrainStop("Jay", 8), new TrainStop("Cross Roads", 6), new TrainStop("Downtown", 0),
-      new TrainStop("Westport", 5)};
+    TrainStop jesse = new TrainStop("Jesse", 1);
+    TrainStop manish = new TrainStop("Manish", 4);
+    TrainStop jay = new TrainStop("Jay", 8);
+    TrainStop crossroads = new TrainStop("Cross Roads", 6);
+    TrainStop downtown = new TrainStop("Downtown", 0);
+    TrainStop westport = new TrainStop("Westport", 5);
     
-    for (TrainStop ts : stops)
-    {
-      route.add(ts);
-    }
+    route.add(jesse);
+    route.add(manish);
+    route.add(jay);
+    route.add(crossroads);
+    route.add(downtown);
+    route.add(westport);
     
     route.printStops();
-    route.getRoute("Westport", "Jesse");
-    route.getRoute("Manish", "Crossroads";
-    route.getRoute("Downtoen", "Jay");
+    route.getRoute(jesse, westport);
+    route.getRoute(manish, crossroads);
+    route.getRoute(downtown, jay);
   } // end main
 } // end TrainStopDriver
